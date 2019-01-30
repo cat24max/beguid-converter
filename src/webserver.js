@@ -4,11 +4,6 @@ const bodyParser = require("body-parser")
 const { listenport, post_key_limit, headers } = require(`${__dirname}/../config`)
 const convert = require("./converter")
 
-//Swagger Stats
-var swStats = require('swagger-stats')
-var apiSpec = require('swagger.json')
-app.use(swStats.getMiddleware({swaggerSpec:apiSpec}))
-
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
